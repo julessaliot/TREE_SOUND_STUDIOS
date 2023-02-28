@@ -31,3 +31,17 @@
   font-family: Lato;
   letter-spacing: 0.5px;
 }
+
+.btn-flat {
+    color: white;
+    padding: 8px 24px;
+    border-radius: 50px;
+    background: #5d882f;
+    transition: background 0.3s ease;
+    margin-top: 175px;
+  }
+
+  .btn-flat:hover {
+    background: #8fc653;
+    color: white;
+  }
