@@ -1,1 +1,33 @@
 // Specific CSS for your home-page
+.banner {
+  background-size: 90%;
+  background-position: top;
+  padding: 150px 0;
+  height: 565px;
+  position: relative;
+  border-top: 2px #8fc653;
+  border-top-style: solid;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 85px;
+  font-family: Lato;
+  letter-spacing: 1px;
+}
+
+.banner p {
+  font-size: 26px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: absolute;
+  margin-top: 130px;
+  font-family: Lato;
+  letter-spacing: 0.5px;
+}
