@@ -1,5 +1,4 @@
 class StudiosController < ApplicationController
-
   def index
     @studios = Studio.all
   end
@@ -18,7 +17,6 @@ class StudiosController < ApplicationController
     if @studio.save
       redirect_to studio_path(@studio)
     else
-      raise
       render :new, status: :unprocessable_entity
     end
   end
