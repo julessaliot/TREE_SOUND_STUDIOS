@@ -1,6 +1,16 @@
-<%= @studio.name %>
-<%= @studio.description %>
+<h1><%= @studio.name %></h1>
 
-<%= @studio.location %>
+<p><%= @studio.description %></p>
 
-<%= image_tag @studio.photo %>
+<ul>
+  <li>Price per hour: <%= number_to_currency(@studio.price_per_hour) %></li>
+  <li>Soundproof: <%= @studio.is_soundproof ? "Yes" : "No" %></li>
+  <li>Location: <%= @studio.location %></li>
+  <li>Max occupancy: <%= @studio.max_occupancy %></li>
+</ul>
+
+<% if @studio.photo.attached? %>
+  <%= cl_image_tag @studio.photo.key %>
+<% else %>
+  <%= image_tag "tree.svg" %>
+<% end %>
