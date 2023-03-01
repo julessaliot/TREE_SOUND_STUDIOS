@@ -81,5 +81,4 @@ end
 # adding Devise:
 gem "devise"
 gem "faker"
-
-# Boostrap DateTime gem
+gem "cloudinary"
