@@ -1,5 +1,4 @@
 
-
 <div class="studio">
 
   <div class="offer-title">
@@ -29,3 +28,20 @@
   </div>
     <a class="btn btn-primary">Book now!</a>
 </div>
+=======
+<h1><%= @studio.name %></h1>
+
+<p><%= @studio.description %></p>
+
+<ul>
+  <li>Price per hour: <%= number_to_currency(@studio.price_per_hour) %></li>
+  <li>Soundproof: <%= @studio.is_soundproof ? "Yes" : "No" %></li>
+  <li>Location: <%= @studio.location %></li>
+  <li>Max occupancy: <%= @studio.max_occupancy %></li>
+</ul>
+
+<% if @studio.photo.attached? %>
+  <%= cl_image_tag @studio.photo.key %>
+<% else %>
+  <%= image_tag "tree.svg" %>
+<% end %>
