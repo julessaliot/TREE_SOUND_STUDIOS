@@ -81,3 +81,4 @@ end
 # adding Devise:
 gem "devise"
 gem "faker"
+gem "cloudinary"
