@@ -28,7 +28,7 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -36,20 +36,23 @@
 .card-category {
   background-size: cover;
   background-position: center;
+  backdrop-filter: blur(14px);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 200px;
-  background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
+
 .card-category:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  background-color: rgba(245, 245, 245, 1);
+  opacity: .6;
 }
 
 .card-category h1 {
@@ -126,4 +129,3 @@
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
-
