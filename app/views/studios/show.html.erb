@@ -1,16 +1,31 @@
-<h1><%= @studio.name %></h1>
 
-<p><%= @studio.description %></p>
 
-<ul>
-  <li>Price per hour: <%= number_to_currency(@studio.price_per_hour) %></li>
-  <li>Soundproof: <%= @studio.is_soundproof ? "Yes" : "No" %></li>
-  <li>Location: <%= @studio.location %></li>
-  <li>Max occupancy: <%= @studio.max_occupancy %></li>
-</ul>
+<div class="studio">
 
-<% if @studio.photo.attached? %>
-  <%= cl_image_tag @studio.photo.key %>
-<% else %>
-  <%= image_tag "tree.svg" %>
-<% end %>
+  <div class="offer-title">
+    <h1><strong><%= @studio.name %></strong></h1>
+    <h2 id="location"><%= @studio.location %></h2>
+  </div>
+  <div class="image-and-info">
+    <div class="offer-image">
+      <% if @studio.photo.attached? %>
+        <%= cl_image_tag @studio.photo.key %>
+      <% else %>
+        <%= image_tag "tree.svg" %>
+      <% end %>
+    </div>
+    <div class="offer-details">
+      <div class="description">
+        <p><strong>Description:</strong> <%= @studio.description %></p>
+      </div>
+      <br>
+      <br>
+      <ul>
+        <li>Price per hour: <%= number_to_currency(@studio.price_per_hour) %></li>
+        <li>Soundproof: <%= @studio.is_soundproof ? "Yes" : "No" %></li>
+        <li>Max occupancy: <%= @studio.max_occupancy %></li>
+      </ul>
+    </div>
+  </div>
+    <a class="btn btn-primary">Book now!</a>
+</div>
