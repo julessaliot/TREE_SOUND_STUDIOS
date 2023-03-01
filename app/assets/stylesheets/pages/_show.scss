@@ -1,0 +1,41 @@
+.studio {
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  margin: 20px 20px 20px 20px;
+}
+
+.offer-image {
+  align-content: center;
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.offer-details {
+  padding: 0 20px;
+  border: 1px solid;
+  flex: content;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+
+.offer-title {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.image-and-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  align-items: space-between;
+  height: 300px;
+}
+
+#location {
+  font-size: smaller;
+}
