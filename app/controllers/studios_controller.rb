@@ -18,7 +18,6 @@ class StudiosController < ApplicationController
     if @studio.save
       redirect_to studio_path(@studio)
     else
-      raise
       render :new, status: :unprocessable_entity
     end
   end

@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
+
 puts "Cleaning database..."
 Studio.destroy_all
 
@@ -16,17 +18,107 @@ user = User.create(
   password: Faker::Internet.password
 )
 
-10.times do
-  studio = Studio.create(
-    user_id: user.id,
-    name: Faker::Music.album,
-    description: Faker::Lorem.paragraph(sentence_count: 2),
-    price_per_hour: rand(1..100),
-    is_soundproof: "true",
-    location: Faker::Address.full_address,
-    max_occupancy: rand(1..8)
-  )
-  puts "#{user.first_name} created #{studio.name}"
-end
+# 10.times do
+#   studio = Studio.create(
+#     user_id: user.id,
+#     name: Faker::Music.album,
+#     description: Faker::Lorem.paragraph(sentence_count: 2),
+#     price_per_hour: rand(1..100),
+#     is_soundproof: "true",
+#     location: Faker::Address.full_address,
+#     max_occupancy: rand(1..8)
+
+#   )
+
+#   puts "#{user.first_name} created #{studio.name}"
+# end
+
+
+
+studio = Studio.new(
+  user_id: user.id,
+  name: Faker::Music.band,
+  description: Faker::Lorem.paragraph(sentence_count: 2),
+  price_per_hour: rand(1..100),
+  is_soundproof: "true",
+  location: Faker::Address.full_address,
+  max_occupancy: rand(1..8)
+)
+
+file = URI.open("https://lh3.googleusercontent.com/p/AF1QipN5c6XuujjIuumom6ySj7dvI9ZM1NDAHZN4TWJl=w1080-h608-p-k-no-v0")
+studio.photo.attach(io: file, filename: "planta_studio.png", content_type: "image/png")
+studio.save
+
+studio = Studio.new(
+  user_id: user.id,
+  name: Faker::Music.band,
+  description: Faker::Lorem.paragraph(sentence_count: 2),
+  price_per_hour: rand(1..100),
+  is_soundproof: "true",
+  location: Faker::Address.full_address,
+  max_occupancy: rand(1..8)
+)
+
+file = URI.open("https://www.themotormuseum.com/wp-content/uploads/2022/11/DSC_7133-1.jpg")
+studio.photo.attach(io: file, filename: "planta_studio.png", content_type: "image/png")
+studio.save
+
+studio = Studio.new(
+  user_id: user.id,
+  name: Faker::Music.band,
+  description: Faker::Lorem.paragraph(sentence_count: 2),
+  price_per_hour: rand(1..100),
+  is_soundproof: "true",
+  location: Faker::Address.full_address,
+  max_occupancy: rand(1..8)
+)
+
+file = URI.open("https://www.headmusicstudios.com/img/bg/2.jpg")
+studio.photo.attach(io: file, filename: "planta_studio.png", content_type: "image/png")
+studio.save
+
+
+studio = Studio.new(
+  user_id: user.id,
+  name: Faker::Music.band,
+  description: Faker::Lorem.paragraph(sentence_count: 2),
+  price_per_hour: rand(1..100),
+  is_soundproof: "true",
+  location: Faker::Address.full_address,
+  max_occupancy: rand(1..8)
+)
+
+file = URI.open("https://major-tom.tv/processed/assets/images/1385/16-x-9-1050_JLD_MAJORTOM-HIGHER-RES_1bdaad4a4b4632870da53fb97d552706.jpg")
+studio.photo.attach(io: file, filename: "planta_studio.png", content_type: "image/png")
+studio.save
+
+
+studio = Studio.new(
+  user_id: user.id,
+  name: Faker::Music.band,
+  description: Faker::Lorem.paragraph(sentence_count: 2),
+  price_per_hour: rand(1..100),
+  is_soundproof: "true",
+  location: Faker::Address.full_address,
+  max_occupancy: rand(1..8)
+)
+
+file = URI.open("https://images.squarespace-cdn.com/content/v1/5ce131c4116c940001d52ba7/1616916897821-I5AR430U054FQPR7RD46/P1120063_batch-web.jpg?format=1000w")
+studio.photo.attach(io: file, filename: "planta_studio.png", content_type: "image/png")
+studio.save
+
+studio = Studio.new(
+  user_id: user.id,
+  name: Faker::Music.band,
+  description: Faker::Lorem.paragraph(sentence_count: 2),
+  price_per_hour: rand(1..100),
+  is_soundproof: "true",
+  location: Faker::Address.full_address,
+  max_occupancy: rand(1..8)
+)
+
+file = URI.open("https://americansongwriter.com/wp-content/uploads/2017/05/tss.jpg")
+studio.photo.attach(io: file, filename: "planta_studio.png", content_type: "image/png")
+studio.save
 
 puts "Finished!"
