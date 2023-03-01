@@ -1,12 +1,14 @@
+
+<div class="new_studio_form">
+<h2 class="header">Your studio</h2>
 <%= simple_form_for(@studio) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price_per_hour %>
-  <%= f.input :location %>
-  <%= f.input :max_occupancy %>
-  <%= f.input :is_soundproof %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
+  <h3 class="text"><%= f.input :name %></h3>
+  <h3 class="text"><%= f.input :description %></h3>
+  <h3 class="text"><%= f.input :price_per_hour %></h3>
+  <h3 class="text"><%= f.input :location %></h3>
+  <h3 class="text"><%= f.input :max_occupancy %></h3>
+  <h3 class="text"><%= f.input :is_soundproof %></h3>
+  <h3 class="text"><%= f.input :photo, as: :file %></h3>
+  <div class="button-create"><%= f.submit %></div>
 <% end %>
-
-
+</div>
