@@ -3,11 +3,6 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  def new
-    @studio = Studio.find(params[:studio_id])
-    @booking = Booking.new
-  end
-
   def create
     @studio = Studio.find(params[:studio_id])
     @booking = Booking.new(booking_params)
@@ -18,7 +13,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to booking_confirmation_studio_path(@booking.studio)
     else
-      render :new, status: :unprocessable_entity
+      render "studios/show", status: :unprocessable_entity
     end
   end
 
