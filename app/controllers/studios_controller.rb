@@ -11,6 +11,7 @@ class StudiosController < ApplicationController
 
   def show
     @studio = Studio.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -38,6 +39,10 @@ class StudiosController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def booking_confirmation
+    @studio = Studio.find(params[:id])
   end
 
   private

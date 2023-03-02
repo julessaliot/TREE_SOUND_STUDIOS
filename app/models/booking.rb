@@ -10,9 +10,11 @@ class Booking < ApplicationRecord
 
   private
 
-  def end_must_be_after_start
-    if start_time >= end_time
-      errors.add(:end_time, "must be after start time!")
+  def end_date_after_start_date
+    return if end_date.blank? || start_date.blank?
+
+    if end_date < start_date
+      errors.add(:end_date, "must be after the start date")
     end
   end
 end
