@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :studios do
     resources :bookings, only: %i[new create]
   end
+  get 'search', to: 'studios#search'
   resources :bookings, only: %i[index destroy edit update]
 end

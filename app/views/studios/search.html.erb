@@ -1,0 +1,28 @@
+<div class="banner_guitar" data-controller="audio" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.ctfassets.net/bdyhigkzupmv/6lySzcy7qcIN1tf81Qkus/5b5ac73daeaf61f9057c0b0dd8447a31/hero-guitar-outro.jpg);">
+    <h1><strong>Studios that march your search:</strong></h1>
+    <p>Showing results for <%= @location %> from <%= @check_in %> to <%= @check_out %> for <%= @max_occupancy %> occupants:</p>
+</div>
+
+<div class="cards m-5">
+  <% @studios.each do |studio| %>
+    <%= link_to studio_path(studio), class:"text-decoration-none" do %>
+      <% if studio.photo.attached? %>
+        <div class="card-category" style="height: 400px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+          url('<%= cl_image_path studio.photo.key, height: 300, crop: :fill %>')">
+            <h1><%= studio.name %></h1>
+            <h2><i class="fa-solid fa-location-dot"></i> <%= studio.location %></h2>
+            <br>
+            <p><%= studio.price_per_hour %>€/h</p>
+        </div>
+      <% else %>
+        <div class="card-category" style="height: 400px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+          url('<%= image_path "tree.svg" %>')">
+          <h1><%= studio.name %></h1>
+          <i class="fa-solid fa-location-dot"></i> <%= studio.location %>
+          <br>
+          <%= studio.price_per_hour %>€/h
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

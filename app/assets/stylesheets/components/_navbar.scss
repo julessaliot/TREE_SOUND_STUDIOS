@@ -124,3 +124,21 @@ input[type="text"]:focus {
 .bar>div:hover::before {
   background: transparent;
 }
+
+.bar input[type="date"] {
+  font-size: 7px;
+  padding: 4px;
+  width: 30px;
+  box-sizing: border-box;
+}
+
+.bar input[type="time"] {
+  font-size: 7px;
+  padding: 4px;
+  width: 30px;
+  box-sizing: border-box;
+}
+
+.bar check-in {
+  font-size: smaller;
+}
