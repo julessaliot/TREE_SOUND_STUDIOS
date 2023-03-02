@@ -1,0 +1,10 @@
+<%= simple_form_for @booking do |f| %>
+  <div class="form-inputs">
+    <%= f.input :checkin_date, as: :date, label: "Check-in", required: true %>
+    <%= f.input :checkin_time, as: :time, label: false, required: true %>
+    <%= f.input :checkout_time, as: :time, label: "Check-out", required: true %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, "Edit Booking", class: "btn btn-flat-show" %>
+  </div>
+<% end %>

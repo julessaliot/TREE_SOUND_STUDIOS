@@ -12,12 +12,24 @@
 @import "pages/home";
 @import "pages/index";
 
+
+@import "pages/new";
+@import "pages/show";
+@import "pages/booking_confirmation";
+@import "components/search";
+
 .page-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
-  }
+}
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
 
-@import "pages/new";
-@import "pages/show";
-@import "components/search";
+// main {
+//   flex: 1;
+//   padding-bottom: 50px;
+// }

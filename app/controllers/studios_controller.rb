@@ -1,10 +1,17 @@
 class StudiosController < ApplicationController
   def index
     @studios = Studio.all
+    @markers = @studios.geocoded.map do |studio|
+      {
+        lat: studio.latitude,
+        lng: studio.longitude
+      }
+    end
   end
 
   def show
     @studio = Studio.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -39,6 +46,10 @@ class StudiosController < ApplicationController
     @max_occupancy = params[:max_occupancy].to_i
 
     @studios = Studio.where('location = ? AND max_occupancy >= ?', @location, @max_occupancy)
+
+  def booking_confirmation
+    @studio = Studio.find(params[:id])
+
   end
 
   private
