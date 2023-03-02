@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     member do
       get :booking_confirmation
     end
+   end
+    resources :bookings, only: %i[destroy edit update show]
+    get 'search', to: 'studios#search'
   end
-  resources :bookings, only: %i[destroy edit update show]
-end
+  
+  
+

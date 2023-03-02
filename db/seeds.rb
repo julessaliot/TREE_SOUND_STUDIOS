@@ -195,8 +195,8 @@ studio = Studio.new(
   description: Faker::Lorem.paragraph(sentence_count: 10),
   price_per_hour: rand(1..100),
   is_soundproof: "true",
-  location: Faker::Address.full_address,
-  max_occupancy: rand(1..10)
+  location: "Lisbon",
+  max_occupancy: 2
 )
 
 file = URI.open("https://lh3.googleusercontent.com/p/AF1QipN5c6XuujjIuumom6ySj7dvI9ZM1NDAHZN4TWJl=w1080-h608-p-k-no-v0")

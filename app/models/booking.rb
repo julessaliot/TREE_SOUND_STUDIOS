@@ -6,9 +6,10 @@ class Booking < ApplicationRecord
   validates :booked_at, presence: true
   validates :start_time, presence: true
   validates :end_time, presence: true
-  validates :end_must_be_after_start, presence: true
+  #validates :end_must_be_after_start, presence: true
 
   private
+
 
   def end_date_after_start_date
     return if end_date.blank? || start_date.blank?
