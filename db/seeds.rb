@@ -33,8 +33,6 @@ user = User.create(
 #   puts "#{user.first_name} created #{studio.name}"
 # end
 
-
-
 studio = Studio.new(
   user_id: user.id,
   name: Faker::Music.band,
