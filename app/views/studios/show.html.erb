@@ -1,3 +1,42 @@
+<div class="main_show">
+  <div class="container_show">
+    <h2 class="show_name"><%= @studio.name %></h2>
+      <div class="image-preview">
+        <% if @studio.photo.attached? %>
+          <%= cl_image_tag @studio.photo.key %>
+        <% else %>
+          <%= image_tag "studio" %>
+        <% end %>
+      </div>
+      <div class="textandbook">
+        <div class="details">
+          <p><strong>Description: </strong><%= @studio.description%></p>
+          <p><strong>Location: </strong><%= @studio.location %></p>
+          <p><strong>Price per hour: </strong><%= number_to_currency(@studio.price_per_hour) %></p>
+          <p><strong>Soundproof: </strong><%= @studio.is_soundproof ? "Yes" : "No" %></p>
+          <p><strong>Max Occupancy: </strong><%= @studio.max_occupancy %></p>
+        </div>
+        <div class="booking-form">
+            <form>
+              <div class="checkin">
+                <label for="checkin">Check-in:</label>
+                <div class="dateandtime">
+                  <input type="date" id="checkin" name="checkin sate" required>
+                  <input type="time" id="time" name="checkintime" required>
+                </div>
+              </div>
+              <div class="checkout">
+                <label for="checkout">Check-out:</label>
+                  <div class="time">
+                    <input type="time" id="checkout" name="checkout" required>
+                  </div>
+              </div>
+              <%= link_to "Book now", bookings_path, class: "btn btn-flat-show" %>
+            </form>
+        </div>
+      </div>
+  </div>
+</div>
 
 <div class="studio">
 
@@ -28,7 +67,7 @@
   </div>
     <a class="btn btn-primary">Book now!</a>
 </div>
-=======
+
 <h1><%= @studio.name %></h1>
 
 <p><%= @studio.description %></p>
@@ -45,3 +84,4 @@
 <% else %>
   <%= image_tag "tree.svg" %>
 <% end %>
+

@@ -1,44 +1,40 @@
-
 .new_studio_form {
   width: 525px;
   margin: 0 auto;
   padding: 20px 50px 40px;
   font-family: "Nunito", "Helvetica", "sans-serif";
 }
-
 .new_studio_form h2 {
   text-align: center;
   margin-bottom: 30px;
 }
-
 .new_studio_form input {
   margin-bottom: 15px;
 }
-
 .new_studio_form input[type=text] {
   display: block;
   height: 32px;
   padding: 6px 16px;
   width: 100%;
-  background-color: #f3f3f3;
-  border:1px solid #d7d7d7;
+  background-color: #F3F3F3;
+  border:1px solid #D7D7D7;
 }
-
 .new_studio_form input[type=checkbox] {
   float: left;
 }
-
 .new_studio_form input[type=submit] {
-  background-color: #5d882f;
+  background-color: #5D882F;
   color: white;
   box-shadow: none;
   border-radius: 20px;
+  border: 0px;
+  padding: 8px 24px;
+  border-radius: 50px;
 }
-
 .new_studio_form input[type=submit]:hover {
-  background-color: #7d9b5d;
+  background-color: #7D9B5D;
+  border: 0px;
 }
-
 .button-create {
   display: block;
   align-items: center;
@@ -46,8 +42,8 @@
   height: 40px;
   font-weight: 500;
   padding-top: 20px;
+  border: 0px;
 }
-
 .text {
-  font-size: small;
+  font-size: 16px;
 }
