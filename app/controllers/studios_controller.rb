@@ -46,10 +46,10 @@ class StudiosController < ApplicationController
     @max_occupancy = params[:max_occupancy].to_i
 
     @studios = Studio.where('location = ? AND max_occupancy >= ?', @location, @max_occupancy)
+  end
 
   def booking_confirmation
     @studio = Studio.find(params[:id])
-
   end
 
   private

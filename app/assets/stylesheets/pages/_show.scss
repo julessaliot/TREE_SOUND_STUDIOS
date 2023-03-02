@@ -136,16 +136,29 @@
   transform: translateY(1px);
 }
 
-@media screen and (min-width: 768px) {
-  .details {
-    width: 50%;
-    margin-right: 20px;
-  }
+.image-and-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  align-items: space-between;
+  height: 300px;
+}
 
-  .booking-form {
-    width: 30%;
-    margin-top: 0;
-  }
+#location {
+  font-size: smaller;
+}
+
+.details {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.booking-form {
+  width: 30%;
+  margin-top: 0;
+}
 
 .studio {
   font-family: "Nunito", "Helvetica", "sans-serif";
@@ -257,6 +270,7 @@
 .booking-form .btn:active {
   transform: translateY(1px);
 }
+
 @media screen and (min-width: 768px) {
   .details {
     width: 50%;
@@ -267,18 +281,3 @@
     margin-top: 0;
   }
 }
-
-
-.image-and-info {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  align-items: space-between;
-  height: 300px;
-}
-
-#location {
-  font-size: smaller;
-
