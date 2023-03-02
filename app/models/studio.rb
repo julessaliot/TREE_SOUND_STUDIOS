@@ -10,4 +10,7 @@ class Studio < ApplicationRecord
   belongs_to :user
 
   validates :name, :description, :price_per_hour, :is_soundproof, :location, :max_occupancy, presence: true
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_address?
 end

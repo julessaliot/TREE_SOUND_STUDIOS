@@ -1,31 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-// .cards {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 32px;
-//   // padding-top: 24px;
-//   // padding-bottom: 16px;
-// }
-
-// .card-category{
-//   background-size: cover;
-//   background-position: center;
-//   color: white;
-//   font-size: 24px;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   border-radius: 10px;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   font-family: 'Lato', sans-serif;
-//   text-align: right;
-// }
-
-// .card-category h1{
-//   font-family: 'Lato', sans-serif;
-//   font-size: 36px;
-//   text-align: right;
-// }
-
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -46,6 +20,7 @@
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  padding: 15px;
 }
 
 .card-category:hover {
@@ -73,11 +48,13 @@
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
+
 .card-category p {
-  font-size: 20px;
+  font-size: 22px;
   color: #dfdfdf;
   text-align: center;
   font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
 // Smallest device
@@ -101,10 +78,7 @@
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-}
-.card-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+
 }
 .card-category h1 {
   font-size: 36px;
@@ -113,6 +87,7 @@
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
+
 .card-category h2 {
   margin-top: 20px;
   font-size: 24px;
@@ -120,6 +95,13 @@
   color: #DFDFDF;
   text-align: center;
   font-family: 'Lato', sans-serif;
+}
+
+
+.card-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(145, 145, 145, 0.4);
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 
