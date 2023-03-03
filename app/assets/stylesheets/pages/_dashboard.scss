@@ -1,5 +1,47 @@
-.dashboard, .bookings_studios {
-  margin: 20px 0;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.user-photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.user-photo h2 {
+  margin-top: 10px;
+  font-size: 2rem;
+  text-align: left;
+  font-family: 'Lato';
+  font-weight: bold;
+}
+
+.details-user {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: 'Lato';
+}
+
+.bookings-dash {
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.bookings-studios {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-family: 'Lato';
+  font-weight: bold;
 }
 
 table {
@@ -7,30 +49,53 @@ table {
   width: 100%;
 }
 
-thead {
-  background-color: #ccc;
-}
-
-th, td {
-  padding: 10px;
+th,
+td {
   text-align: left;
+  padding: 8px;
+  font-family: 'Lato';
+  font-weight: 200;
+  font-size: 20px;
+  background-color: rgb (255, 255, 255, 1)
 }
 
 th {
   font-weight: bold;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+.studios-dash {
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+
 }
 
 .studios {
-  list-style: none;
-  padding-left: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .eachstudio {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #f2f2f2;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'Lato';
+}
+.eachstudio {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'Lato';
+}
+
+.eachstudio h2 {
+  margin-bottom: 10px;
+  font-family: 'Lato';
+  font-weight: bold ;
+}
+
+.container-all-dash {
+  display:flex;
+  margin:auto;
 }
