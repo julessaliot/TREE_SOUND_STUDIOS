@@ -4,8 +4,6 @@
 
 <div class="cards m-5">
   <% @studios.each do |studio| %>
-
-
     <%= link_to studio_path(studio), class:"text-decoration-none" do %>
       <% if studio.photo.attached? %>
         <div class="card-category" style="height: 400px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
