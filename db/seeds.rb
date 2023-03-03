@@ -17,7 +17,7 @@ studio = Studio.new(
   description: "Abbey Road studios are now regarded as the most iconic set of studios going, you can bet almost anyone has heard of them even if they’re not in the music industry. With their high-end gear and clientele boasting some of the most legendary names in the music business from The Beatles and Aretha Franklin to Kanye West and Lady Gaga, it’s no surprise they take the number one spot on our list. There is no shortage of artist development in this recording studio.",
   price_per_hour: rand(1..100),
   is_soundproof: "true",
-  location: "3 Abbey Rd, London NW8 9AY, United Kingdom"
+  location: "3 Abbey Rd, London NW8 9AY, United Kingdom",
   max_occupancy: rand(1..15)
 )
 
@@ -33,7 +33,7 @@ studio = Studio.new(
   They also have the option to cut vinyl masters in 2 super-easy online steps so you can be sure to have a good sounding record starting at $600 to produce.",
   price_per_hour: rand(1..100),
   is_soundproof: "true",
-  location: "1750 Vine St, Los Angeles, CA 90028, United States of America"
+  location: "1750 Vine St, Los Angeles, CA 90028, United States of America",
   max_occupancy: rand(1..11)
 )
 
@@ -123,7 +123,7 @@ studio.save
 studio = Studio.new(
   user_id: user.id,
   name: "Brothers in Arms Studio",
-  description: "This is home to over 140 creative people and some of the most important recording studios in the UK. Making us one of London’s most diverse creative communities. ",
+  description: "This is home to over 140 creative people and some of the most important recording studios in the UK. Making us one of London’s most diverse creative communities.",
   price_per_hour: rand(1..100),
   is_soundproof: "true",
   location: "Rua da Bempostinha 68B, 1150-099 Lisbon",
