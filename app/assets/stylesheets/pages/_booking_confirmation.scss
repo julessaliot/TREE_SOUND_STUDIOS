@@ -59,9 +59,13 @@ img {
 
 .main_show {
   background-color: #061400;
+  height: 76vh;
 }
 
 .container_show {
+  display: flex;
+  justify-content: center;
+  height: 76vh;
   max-width: 750px;
   align-items: center;
   margin: auto;
