@@ -1,7 +1,7 @@
 .main_show {
-  background-color: #061400;
+  //background-color: #061400;
+  margin: 5vw;
 }
-
 .container_show {
   display: flex;
   flex-wrap: wrap;
@@ -274,4 +274,17 @@
     width: 30%;
     margin-top: 0;
   }
+}
+
+
+.btn-flat-show {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: #5D882F;
+  transition: background 0.3s ease;
+}
+.btn-flat-show:hover {
+  background: #8FC653;
+  color: white;
 }

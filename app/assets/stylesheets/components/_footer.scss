@@ -21,3 +21,9 @@
   padding: 0px 10px;
   background: rgb(250, 255, 251);
 }
+
+.page-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  }

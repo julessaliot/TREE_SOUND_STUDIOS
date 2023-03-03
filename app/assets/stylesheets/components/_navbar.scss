@@ -4,6 +4,8 @@
   padding: 15px;
   border-bottom: 0.8px #8fc653;
   border-bottom-style: solid;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -34,7 +36,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.6rem;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 .bar p {
   font-size: 0.8rem;

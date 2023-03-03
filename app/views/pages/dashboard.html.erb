@@ -1,6 +1,6 @@
 <div class="main-dash">
   <div class="banner_guitar" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.ctfassets.net/bdyhigkzupmv/6lySzcy7qcIN1tf81Qkus/5b5ac73daeaf61f9057c0b0dd8447a31/hero-guitar-outro.jpg);">
-      <h1><strong>Dashboard</strong></h1>
+      <h1><strong>Hello Kurt Cobain!</strong></h1>
   </div>
     <div class="d-flex flex-row" style="min-height: 100vh">
       <div class="container-all-dash">
@@ -18,40 +18,31 @@
         </div>
         <div class="all-details">
           <div class="bookings-dash">
-              <h2 class="bookings-studios">My Bookings</h2>
-            <% if @user.bookings.any? %>
-              <table>
-              <thead>
-                <tr>
-                <th>Studio Name</th>
-                <th>Booking Date</th>
-                <th>Booking Time</th>
-                </tr>
-              </thead>
-              <tbody>
+            <h2 class="bookings-studios">My Bookings</h2>
+              <% if @user.bookings.any? %>
                 <% @user.bookings.each do |booking| %>
-              <tr>
-                <td><%= booking.studio.name %></td>
-
-              </tr>
+                  <div class="card" style="width: 18rem;">
+                    <%= cl_image_tag booking.studio.photo.key %>
+                    <h2><%= booking.studio.name %></h2>
+                    <p>From <%= booking.start_time %></p>
+                    <p>To <%= booking.end_time %></p>
+                  </div>
                 <% end %>
-              </tbody>
-              </table>
-            <% end %>
+              <% else %>
+                <%= "You have no bookings scheduled!" %>
+              <% end %>
           </div>
           <div class="studios-dash">
-              <h2 class="bookings-studios">My Studios</h2>
-              <ul class="studios">
+            <h2 class="bookings-studios">My Studios</h2>
               <% if @user.studios.any? %>
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                  <% @user.studios.each do |studio| %>
-                  <div class="card-body">
-                    <li class="eachstudio"><%= studio.name %></li>
-                  <% end %>
-                    <%= link_to"Booking Details", booking_confirmation_studio_path, class:"btn btn-flat"%>
+                <% @user.studios.each do |studio| %>
+                  <div class="card" style="width: 18rem;">
+                    <%= cl_image_tag studio.photo.key %>
+                    <h2><%= studio.name %></h2>
                   </div>
-              </div>
+                <% end %>
+              <% else %>
+                <%= "You have no studios created!" %>
               <% end %>
           </div>
         </div>
