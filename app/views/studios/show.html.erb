@@ -1,6 +1,7 @@
 <div class="main_show">
-  <div class="container_show">
-    <h2 class="show_name"><%= @studio.name %></h2>
+  <div class="d-flex">
+    <div class="container_show">
+      <h2 class="show_name"><%= @studio.name %></h2>
       <div class="image-preview">
         <% if @studio.photo.attached? %>
           <%= cl_image_tag @studio.photo.key %>
@@ -8,7 +9,7 @@
           <%= image_tag "studio" %>
         <% end %>
       </div>
-      <div class="textandbook">
+        <div class="textandbook">
         <div class="details">
           <p><strong>Description: </strong><%= @studio.description%></p>
           <p><strong>Location: </strong><%= @studio.location %></p>
@@ -37,6 +38,10 @@
         <% end %>
         </div>
       </div>
+    </div>
+    <div style="width: 100%; height: calc(100vh - 106px); position: sticky; top: 106px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
 </div>
-<div><%= render "map" %></div>

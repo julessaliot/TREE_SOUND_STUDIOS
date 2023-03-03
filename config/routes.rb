@@ -6,14 +6,12 @@ Rails.application.routes.draw do
   get "/my-studios", to: "pages#my_studios"
 
   resources :studios do
-    resources :bookings, only: %i[new create]
-    member do
-      get :booking_confirmation
+    resources :bookings, only: :create do
+      member do
+        get :booking_confirmation
+      end
     end
    end
     resources :bookings, only: %i[destroy edit update show]
     get 'search', to: 'studios#search'
   end
-  
-  
-
