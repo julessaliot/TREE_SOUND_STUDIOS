@@ -50,8 +50,12 @@ class StudiosController < ApplicationController
   def search
     @location = params[:location]
     @max_occupancy = params[:max_occupancy].to_i
-
-    @studios = Studio.where('location = ? AND max_occupancy >= ?', @location, @max_occupancy)
+    if params[:location].present?
+      sql_query = "location ILIKE :location AND max_occupancy <= :max_occupancy"
+      @studios = Studio.where(sql_query, location: "%#{params[:location]}%", max_occupancy: params[:max_occupancy].to_s)
+    else
+      @studios = Studio.all
+    end
   end
 
   def booking_confirmation
@@ -61,6 +65,6 @@ class StudiosController < ApplicationController
   private
 
   def studio_params
-    params.require(:studio).permit(:name, :description, :price_per_hour, :is_soundproof, :location, :max_occupancy, :photo, :check_in, :check_out)
+    params.require(:studio).permit(:name, :description, :price_per_hour, :is_soundproof, :location, :max_occupancy, :photo)
   end
 end
