@@ -1,2 +1,60 @@
-<h1>My Bookings</h1>
-<h1>My Studios</h1>
+<div class="main-dash">
+  <div class="banner_guitar" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.ctfassets.net/bdyhigkzupmv/6lySzcy7qcIN1tf81Qkus/5b5ac73daeaf61f9057c0b0dd8447a31/hero-guitar-outro.jpg);">
+      <h1><strong>Dashboard</strong></h1>
+  </div>
+    <div class="d-flex flex-row" style="min-height: 100vh">
+      <div class="container-all-dash">
+        <div class="container-dash">
+          <div class="user-photo">
+              <%= image_tag "kurt-cobain.jpg" %>
+              <h2><strong>Kurt Cobain</strong></h2>
+                <div class="details-user">
+                  <p><i class="fa-solid fa-location-dot"></i> Sky Land</p>
+                  <p><strong>Instruments: </strong>Guitar</p>
+                  <p><strong>E-mail: </strong>kurt.cobain27@thesky.com</p>
+                  <p><strong>Password: </strong>****************</p>
+                </div>
+          </div>
+        </div>
+        <div class="all-details">
+          <div class="bookings-dash">
+              <h2 class="bookings-studios">My Bookings</h2>
+            <% if @user.bookings.any? %>
+              <table>
+              <thead>
+                <tr>
+                <th>Studio Name</th>
+                <th>Booking Date</th>
+                <th>Booking Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @user.bookings.each do |booking| %>
+              <tr>
+                <td><%= booking.studio.name %></td>
+
+              </tr>
+                <% end %>
+              </tbody>
+              </table>
+            <% end %>
+          </div>
+          <div class="studios-dash">
+              <h2 class="bookings-studios">My Studios</h2>
+              <ul class="studios">
+              <% if @user.studios.any? %>
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                  <% @user.studios.each do |studio| %>
+                  <div class="card-body">
+                    <li class="eachstudio"><%= studio.name %></li>
+                  <% end %>
+                    <%= link_to"Booking Details", booking_confirmation_studio_path, class:"btn btn-flat"%>
+                  </div>
+              </div>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
