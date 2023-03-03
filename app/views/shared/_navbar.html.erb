@@ -4,32 +4,23 @@
       <%= image_tag "logo.svg" %>
     <% end %>
 
-  <div class="bar">
-
-    <%= form_with url: search_path, method: :get, class: "d-flex" do %>
+  <div class="">
+    <%= form_with url: search_path, method: :get, class: "d-flex bar" do %>
       <%= text_field_tag :location,
         params[:location],
         class: "form-control location",
-        placeholder: "Where to?"
+        placeholder: "Where are you going?"
       %>
-        <div class="check-in">
-          <p>Check in</p>
-          <input type="date" id="check-in" name="checkin sate" required>
-          <input type="time" id="in-time" name="checkintime" required>
-        </div>
-        <div class="check-out">
-          <p>Check out</p>
-          <input type="date" id="check-out" name="checkin sate" required>
-          <input type="time" id="out-time" name="checkintime" required>
-      </div>
-
+      <br>
       <%= text_field_tag :max_occupancy,
         params[:max_occupancy],
         class: "form-control occupancy",
         placeholder: "Occupants"
       %>
-
-      <%= submit_tag "Search", class: "btn btn-flat-show" %>
+      <br>
+      <%= button_tag(type: "submit", style: "border: none;") do %>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      <% end %>
     <% end %>
   </div>
 
