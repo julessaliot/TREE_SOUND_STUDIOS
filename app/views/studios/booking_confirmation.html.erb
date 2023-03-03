@@ -1,9 +1,17 @@
-<div class="confirmation">
-  <h1>Booking with <%= @studio.name %> Confirmed!</h1>
-  <%= cl_image_tag @studio.photo.key %>
-  <p>Thank you for booking our music studio. We look forward to seeing you soon!</p>
-  <div class="buttons">
-    <%= link_to "Edit Booking", edit_booking_path, class: 'button1' %>
-    <%= link_to "Delete Booking", booking_path, class: 'button2', data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this booking?"} %>
+<div class="main_show">
+  <div class="container_show">
+    <div class="confirmation">
+
+      <div class="confirmation">
+        <h1>Booking with <%= @studio.name %> Confirmed!</h1>
+        <%= cl_image_tag @studio.photo.key %>
+        <p>Thank you for booking our music studio. We look forward to seeing you soon!</p>
+        <div class="buttons">
+          <%= link_to "Edit Booking", edit_booking_path, class: 'button1' %>
+          <%= link_to "Delete Booking", booking_path, class: 'button2', data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this booking?"} %>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>
