@@ -47,7 +47,7 @@ studio = Studio.new(
   description: "The studio was founded in 1969 when George Martin left EMI Records to establish a quality recording sound complex in the heart of London. It has since become one of the most famous studios in the world.",
   price_per_hour: rand(1..100),
   is_soundproof: "true",
-  location:Lyndhurst "Hall, Lyndhurst Road, Hampstead London NW3 5NG",
+  location:"Lyndhurst Hall, Lyndhurst Road, Hampstead London NW3 5NG",
   max_occupancy: rand(1..8)
 )
 
