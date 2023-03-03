@@ -102,5 +102,18 @@ th {
 
 .card {
   border-radius: 10px;
+}
 
+.card > p {
+  font-size: 12px;
+  margin-left: 20px;
+  font-family: 'Lato';
+  margin-bottom: 0px;
+}
+
+.card > h2 {
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: 'Lato';
+  margin-bottom: 10px;
 }
